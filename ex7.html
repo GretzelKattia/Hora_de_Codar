@@ -1,58 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pr-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 7</title>
 </head>
+
 <body>
     <script>
-        // 7. Faça um programa que leia 6 números que o usuário vai informar. 
-        // Todos os números lidos com valor inferior a 72 devem ser somados. 
-        // Escreva o valor final da soma efetuada e também todos valores que o usuário informou.  
-        var valor_1; 
-        var valor_2; 
-        var valor_3; 
-        var valor_4; 
-        var valor_5; 
-        var valor_6;
+        // 7 - Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. 
+        // Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
+        // Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário. 
+
         var soma = 0;
+        var contador = 0;
 
-        valor_1 = parseInt(prompt("O primeiro valor:"));
-        valor_2 = parseInt(prompt("O segundo valor:"));
-        valor_3 = parseInt(prompt("O terceiro valor:"));
-        valor_4 = parseInt(prompt("O quarto valor:"));
-        valor_5 = parseInt(prompt("O quinto valor:"));
-        valor_6 = parseInt(prompt("O sexto valor:"));
+        for (var notas_avaliacao = 1; notas_avaliacao <= 6; notas_avaliacao++) {
+            var notas_avaliacao_recebida = parseInt(prompt("Digite a nota da avaliação " + notas_avaliacao + ":"));
 
-        var numerosInformados = valor_1 + ", " + valor_2 + ", " + valor_3 + ", " + valor_4 + ", " + valor_5 + ", " + valor_6;
+            // Verificar se a nota está dentro do intervalo permitido (0 a 10)
+            while (notas_avaliacao_recebida < 0 || notas_avaliacao_recebida > 10 || isNaN(notas_avaliacao_recebida)) {
+                notas_avaliacao_recebida = parseInt(prompt("Nota inválida. Digite um valor entre 0 e 10 para a avaliação " + notas_avaliacao + ":"));
+            }
 
-        // número é inferior a 72 e o soma
-        if (valor_1 < 72) {
-            soma += valor_1;
-        }
-        if (valor_2 < 72) {
-            soma += valor_2;
-        }
-        if (valor_3 < 72) {
-            soma += valor_3;
-        }
-        if (valor_4 < 72) {
-            soma += valor_4;
-        }
-        if (valor_5 < 72) {
-            soma += valor_5;
-        }
-        if (valor_6 < 72) {
-            soma += valor_6;
+            soma += notas_avaliacao_recebida;
+            contador++;
         }
 
-        // Exibir todos os números informados
-        alert("Números informados: " + numerosInformados);
-
-        // Exibir o valor final da soma efetuada
-        alert("Valor final da soma dos números inferiores a 72: " + soma);
-
+        // Calcular a média apenas se todas as notas forem válidas
+        var ler_notas = soma / contador;
+        alert("A média deste aluno é: " + ler_notas.toFixed(2));
     </script>
 </body>
+
 </html>

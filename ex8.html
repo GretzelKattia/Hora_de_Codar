@@ -1,47 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 8</title>
 </head>
+
 <body>
     <script>
-        // 8. Escreva um programa que calcule a média de quatro números informados pelo usuário, 
-        // mas somente se esses números forem maiores que 0 e menores que 10. No final, 
-        // se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". 
-        // Em qualquer outra situação, ele receberá uma mensagem de "tente novamente"
+        // 8 - Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive). 
+        // Considere que o N será sempre maior que ZERO.
+        // N  é um valor informado pelo usuário
 
-        var numero1;
-        var numero2;
-        var numero3;
-        var numero4;
-        var media;
+        var N;
+        var num_maior;
 
+        N = parseInt(prompt("Digite um valor para N:"));
 
-        numero1 = parseFloat(prompt("Digite o primeiro número:"));
-        numero2 = parseFloat(prompt("Digite o segundo número:"));
-        numero3 = parseFloat(prompt("Digite o terceiro número:"));
-        numero4 = parseFloat(prompt("Digite o quarto número:"));
-
-        if (numero1 > 0 && numero1 < 10 &&
-            numero2 > 0 && numero2 < 10 &&
-            numero3 > 0 && numero3 < 10 &&
-            numero4 > 0 && numero4 < 10) {
-
-            media = (numero1 + numero2 + numero3 + numero4) / 4;
-
-            if (media > 5) {
-                alert("Você passou no teste");
-            } else {
-                alert("Hmmm tente novamente");
-            }
-
-        } else {
-            alert("Puxa, toma cuidado, passou do limite estabelecido");
+        while (N <= 0) {
+            N = parseInt(prompt("Desculpa, mas a conta não pode ser feita, pois o valor é menor que 0"));
         }
 
-        
+        if (N > 0) {
+            for (num_maior = N; num_maior > 0; num_maior--) {
+                alert(num_maior);
+                document.write(num_maior + "<br>");
+
+            }
+        }
+
+
     </script>
 </body>
 

@@ -7,23 +7,14 @@
 </head>
 <body>
     <script>
-        // 9. Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela 
-        // poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu).
-        var ano_de_nascimento;
-        var ano_atual;
-        var idade;
+        // 9 - Escreva um algoritmo para imprimir os 10 primeiros números inteiros maiores que 100.
+        var numero; 
 
-        ano_de_nascimento = parseInt(prompt("Olá, poderia informar seu ano de nascimento:"));
-        ano_atual = parseInt(prompt("Digite o ano atual:"));
-        idade = ano_atual - ano_de_nascimento;
-        if (idade > 18) {
-            alert("A pessoa já consegue votar esse ano!!");
+        for (numero=100; numero<=110; numero++) {
+            alert (numero);
+            document.write(numero + "<br>");
         }
-        else {
-            alert("A pessoa ainda não irá votar esse ano, por ser menor de idade");
-        }
-
-
+        document.write(":)");
 
     </script>
 </body>

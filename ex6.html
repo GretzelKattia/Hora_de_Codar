@@ -1,55 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 6</title>
+    <title>Exercício 5</title>
 </head>
 
 <body>
     <script>
-        // 6. Faça um programa que receba quatro valores informados pelo usuário, 
-        // mas informe somente o primeiro, o último e o maior de todos eles (considere que todos os números informados serão diferentes)
-        var valor_1;
-        var valor_2;
-        var valor_3;
-        var valor_4;
-        var resultado;
+        //https://docs.google.com/forms/d/e/1FAIpQLSeTFnLM1NEtCo_3jw5TTcl_ctjFMx_djQgLpvVm61gQZSasZw/viewform
+
+        // 6 - Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. 
+        // Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?"
+        // e solicitar um resposta. Se a resposta for "S", o programa deve ser executado novamente, 
+        // caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.
 
 
-        valor_1 = parseInt(prompt("Digite um valor, por favor: "));
-        valor_2 = parseInt(prompt("Digite um valor, por favor: "));
-        valor_3 = parseInt(prompt("Digite um valor, por favor: "));
-        valor_4 = parseInt(prompt("Digite um valor, por favor: "));
+        let alunosAprovados = 0;
+        let calcularOutroAluno = true;
 
-        alert(`O primeiro valor é ${valor_1}`);
-        alert(`O último valor é ${valor_4}`);
+        while (calcularOutroAluno) {
+            let nota1 = parseFloat(prompt("Digite a primeira nota do aluno: "));
+            let nota2 = parseFloat(prompt("Digite a segunda nota do aluno: "));
+            let mediaFinal = (nota1 + nota2) / 2;
 
-        if (valor_1 > valor_2 && valor_1 > valor_3 && valor_1 > valor_4) {
-            resultado = valor_1;
-            alert(`O maior valor entre eles é ${resultado}`);
+            if (mediaFinal >= 9.5) {
+                alunosAprovados++;
+            }
 
-        }
-        else if (valor_2 > valor_1 && valor_2 > valor_3 && valor_2 > valor_4) {
-            resultado = valor_2;
-            alert(`O maior valor entre eles é ${resultado}`);
-
-        }
-        else if (valor_3 > valor_1 && valor_3 > valor_2 && valor_3 > valor_4) {
-            resultado = valor_3;
-            alert(`O maior valor entre eles é ${resultado}`);
-
-        }
-        else if (valor_4 > valor_1 && valor_4 > valor_2 && valor_4 > valor_3) {
-            resultado = valor_4;
-            alert(`O maior valor entre eles é ${resultado}`);
-        }
-        else {
-            alert("Não tem valor maior");
+            let resposta = prompt("Calcular a média de outro aluno? (S/N)");
+            if (resposta == 'N' || resposta == 'n') {
+                calcularOutroAluno = false;
+            }       
         }
 
-        
+        alert("Quantidade de alunos aprovados: " + alunosAprovados);
+
+
 
 
     </script>
