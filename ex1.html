@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>exercicio 1</title>
 </head>
 <body>
     <script>
-        //  Escreva um programa em Javascript e crie uma variável chamada "nome_do_carro" e atribua-a um valor "Fusca". Exiba-a ao usuário.
-        
-        var nome_do_carro = "Fusca";
-        alert(nome_do_carro);
+        // 1. Escreva um programa em que o
+        // usuário informe dois números utilizando o "prompt". Então escreva em tela o maior deles.
+        var num1 = parseFloat(prompt("Olá, informe o primeiro número:"));
+        var num2 = parseFloat(prompt("Olá, informe o primeiro número:"));
 
+        if (num1 > num2) {
+            alert(`O número ${num1} é o maior dos dois`);
+        }
+        else {
+            alert(`O número ${num2} é o maior dos dois`);
+        }
     </script>
 </body>
 </html>
