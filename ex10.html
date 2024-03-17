@@ -1,39 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 10</title>
 </head>
-
 <body>
     <script>
-        // 10. Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1: feminino 2: masculino) 
-        // de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas:
+        // 10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário.
+        var N;
+        var num_limite;
+        var calcular;
+        var resposta;
 
-        var altura;
-        var sexo;
-        var pesoIdeal;
-        altura = parseFloat(prompt("Digite a sua altura a seguir: "));
-        sexo = parseInt(prompt("Digite 1 pra o genero feminino ou 2 para o genero masculino:"));
-
-        if (sexo === 1) {
-            //mulher
-            pesoIdeal = (72.7 * altura) - 58;
-            alert(`O peso ideal desta pessoa é ${pesoIdeal.toFixed(2)} kg`);
-        } else if (sexo === 2) {
-            //homem
-            pesoIdeal = (62.1 * altura) - 44.7;
-            alert(`O peso ideal desta pessoa é ${pesoIdeal.toFixed(2)} kg`);
-        } else {
-            alert("Opção de sexo inválida. Por favor, escolha 1 para feminino ou 2 para masculino.");
-            console.log("Opção de sexo inválida. Por favor, escolha 1 para feminino ou 2 para masculino.");
+        alert ("Olá, no programa a seguir iremos a tabuada de 1 a N");
+        N = parseInt(prompt("Digite um valor para N:"));
+        for (num_limite = 1; num_limite<=N; num_limite++){
+            for (calcular = 1; calcular<=10; calcular++) {
+                resposta = calcular * num_limite;
+                alert (`${num_limite} x ${calcular} = ${resposta}`);
+            }
         }
-
-
-
+        alert ("Completo!!!")
     </script>
 </body>
-
 </html>

@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 5</title>
+    <title>Exercício 5</title>
 </head>
 <body>
     <script>
+        // 5 - Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros 
+        // informados pelo usuário e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.
 
-        // 5.  Faça um programa que leia 6 valores informados pelo usuário, calcule, 
-        // exiba os números informados e escreva a média aritmética desses valores lidos.
-        var valor_1; 
-        var valor_2; 
-        var valor_3; 
-        var valor_4; 
-        var valor_5; 
-        var valor_6;
-        var resultado;
+        var mediaArit_2_num;
+        var mediaArit_entre_num;
+        var valor_1;
+        var valor_2;
+        var i;
+        var soma = 0;
+        var contador = 0;
 
-        valor_1 = parseInt(prompt("O primeiro valor:"));
-        valor_2 = parseInt(prompt("O segundo valor:"));
-        valor_3 = parseInt(prompt("O terceiro valor:"));
-        valor_4 = parseInt(prompt("O quarto valor:"));
-        valor_5 = parseInt(prompt("O quinto valor:"));
-        valor_6 = parseInt(prompt("O sexto valor:"));
+        valor_1 = parseInt(prompt("Digite o valor 1:"));
+        valor_2 = parseInt(prompt("Digite o valor 2:"));
 
-        resultado = (valor_1 + valor_2 + valor_3 + valor_4 + valor_5 + valor_6) / 6;
-        alert(`O resultado das média aritmética é ${resultado}`);
+        for (i = valor_1 + 1; i < valor_2; i++) {
+            soma+=i;
+            contador++;
+        }
 
-        console.log(valor_1); 
-        console.log(valor_2); 
-        console.log(valor_3); 
-        console.log(valor_4); 
-        console.log(valor_5); 
-        console.log(valor_6); 
-        console.log(resultado); 
+        mediaArit_2_num = (valor_1 + valor_2) / 2;
+        
+        mediaArit_entre_num = soma / contador;
 
+        alert (`A media aritmetica dos dois valores é ${mediaArit_2_num}`);
+        alert (`A media aritmetica entre esses dois valores é ${mediaArit_entre_num}`);
     </script>
 </body>
 </html>

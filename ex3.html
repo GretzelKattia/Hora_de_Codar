@@ -1,49 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 3</title>
+    <title>Exercício 3</title>
 </head>
-
 <body>
     <script>
-        // 3. Faça um programa para ler 3 valores (considere que não serão informados valores iguais) 
-        // e escrever o maior deles.
-        var valor_1;
-        var valor_2;
-        var valor_3;
-        var valor_maior;
-        var valor_seg_maior;
-        var resultado;
-
-        valor_1 = parseInt(prompt("Digite o primeiro valor:"));
-        valor_2 = parseInt(prompt("Digite o segundo valor:"));
-        valor_3 = parseInt(prompt("Digite o terceiro valor:"));
-
-        //verificar se os três são iguais
-        if (valor_1 == valor_2 || valor_2 == valor_3 || valor_3 == valor_1) {
-            alert("Este programa tem todos seus valores iguais");
-        }
-
-        else {
-
-            //PrimeiroMaior
-            if (valor_1 > valor_2 && valor_1 > valor_3) {
-                valor_maior = valor_1;
-            }
-            else if (valor_2 > valor_1 && valor_2 > valor_3) {
-                valor_maior = valor_2;
-            }
-            else {
-                valor_maior = valor_3;
-            }
-
-            alert(`O maior número entre eles é ${valor_maior}`);
-
+        // 3 - Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente.
+        // Exemplo: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+        let num;
+        
+        for ( num = 10; num >= 1; num--) {
+            alert(num);
+            document.write(num + ",");
+            
         }
     </script>
 </body>
-
 </html>
