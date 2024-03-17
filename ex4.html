@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Considerando a figura abaixo, escreva um programa para cada forma que calcule e exiba em tela cada uma de suas respectivas áreas. O usuário irá informar os valores de cada variável.
+
+        var base;
+        var altura;
+
+        var lado; 
+
+        var diagMaior;
+        var diagMenor;
+
+        var baseMaior;
+        var baseMenor;
+
+        var resultado;
+
+        var pi = 3.14;
+
+        //RETANGULO
+        var figura = prompt("Informe a area de qual figura que deseja encontrar: ");
+        if (figura == "ret" || figura == "Ret") {
+            altura = parseInt(prompt("Digite a altura:"));
+            base = parseInt(prompt("Digite a base:"));
+            resultado = base * altura;
+            alert(`O resultado da área é ${resultado}`);
+
+        }
+        //QUADRADO
+        else if (figura == "qua" || figura == "Qua") {
+            lado = parseInt(prompt("Informe o valor do lado:"));
+            resultado = lado**2;
+            alert(`O resultado da área é ${resultado}`);
+        }
+        //LOSANGO
+        else if (figura == "los" || figura == "Los") {
+            diagMaior = parseInt(prompt("Informe o valor da diagonal maior:"));
+            diagMenor = parseInt(prompt("Informe o valor da diagonal menor:"));
+            resultado = (diagMaior* diagMenor)/2;
+            alert(`O resultado da área é ${resultado}`);
+        }
+        //TRAPEZIO
+        else if (figura == "trap" || figura == "Trap") {
+            baseMaior = parseInt(prompt("Informe o valor da base maior:"));
+            baseMenor = parseInt(prompt("Informe o valor da base menor:"));
+            altura = parseInt(prompt("Digite a altura:"));
+            resultado = ((baseMaior* baseMenor)*altura)/2;
+            alert(`O resultado da área é ${resultado}`);
+        }
+        //PARALELOGRAMO
+        else if (figura == "par" || figura == "Par") {
+            altura = parseInt(prompt("Digite a altura:"));
+            base = parseInt(prompt("Digite a base:"));
+            resultado = base * altura;
+            alert(`O resultado da área é ${resultado}`);
+        }
+        //TRIANGULO
+        else if (figura == "tri" || figura == "Tri") {
+            altura = parseInt(prompt("Digite a altura:"));
+            base = parseInt(prompt("Digite a base:"));
+            resultado = (base * altura)/2;
+            alert(`O resultado da área é ${resultado}`);
+        }
+        //CIRCULO
+        else if (figura == "cir" || figura == "Cir") {
+            raio = parseInt(prompt("Digite o raio da figura:"));
+            resultado = (raio**2)*pi;
+            alert(`O resultado da área é ${resultado}`);
+        }
+        else {
+            alert("Não temos essa figura registrada :(");
+        }
+    </script>
+</body>
+
+</html>
